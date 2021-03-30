@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Full View</title>
+
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/post.css">
+</head>
+<body>
+
+<!-- Sign in -->
+<div class="Signin modal">
+    <div class="interior_of_Model">
+        <span class="close">&times;</span>
+        <h1>Welcome Back!</h1>
+        <hr>
+
+        <form>
+            <p>Username</p>
+            <input type="text"  placeholder="Enter Username" required>
+
+            <p>Password</p>
+            <input type="password"  placeholder="Enter Password" required>
+
+            <input type="submit" class="button"  value="Login">
+
+        </form>
+        <h3 id="not_member">Not a member?<a id="goToSignUp"><span> Sign up </span></a></h3>
+
+    </div>
+</div>
+
+  
+    
+    <!-- Sign up -->
+<div class="Signup modal">
+    <div  class="interior_of_Model">
+        <span class="close">&times;</span>
+        <h1>Get Started</h1>
+        <hr>
+
+        <form>
+            <p>Full Name</p>
+            <input type="text"   placeholder="Enter Full Name" required>
+
+            <p>Username</p>
+            <input type="text"  placeholder="Enter Username" required>
+
+            <p>Password</p>
+            <input type="password"  placeholder="Enter Password" required>
+
+            <p> Confirm Password</p>
+            <input type="password"  placeholder="Confirm Password" required>
+
+            <input type="submit" class="button" value="Sign up" >
+        </form>
+
+    </div>
+</div>
+    
+    
+<!-- LOGO and header -->
+<div class="header">
+    <div class="header-left">
+    <a  class="logo-title">ScriBBler</a>
+    <p class="middleText">Explore, Imagine, Create</p>
+</div>    
+        <div class="header-right">
+          <button id="btn1">Sign In</button>
+          <button id="btn">Sign Up</button>
+        </div>
+      </div>
+      
+
+<div class="container">
+    <h1 id="heading">Happiness is a State of Mind</h1>
+    <input type="text" id="heading_edit">
+    <div class="name_edit">
+        <p id="name">Author : Rebecca Brown</p>
+        <button id="edit" onclick="editPost()">Edit <img src="https://img.icons8.com/metro/15/ffffff/edit-property.png"/></button>
+        <button id="save" onclick="savePost()">Save <img src="https://img.icons8.com/ios-filled/15/ffffff/save--v1.png"/></button>
+    </div>
+    <p id="postContent">"Happiness is inside of you, and you can achieve it anytime you like, no matter the outside circumstances."
+
+       How many times have you heard this phrase? Although it soundscompletely legitimate, it seems unachievable, at least to you. 
+Most of us are like this. We take pride in making philosophical and deeply inspired conversations about happiness and things in life
+ that truly matter, yet when it comes to our own lives, we can hardly reach this state of mind without that job promotion, new love 
+interest or a dream vacation. However, if we take a more systematic approach towards happiness and consider it as an everyday process
+ that includes certain actions, in time we would be able to reach happier and more positive state of mind faster and without external 
+factors. Here are the steps you can take starting today to bring more happiness in your life.Start from Acceptance
+The first step towards achieving any change in behaviour or in any situation we are not happy with is to accept it. When it comes to 
+personal happiness, we are often striving to become someone or to have something else that we tend to neglect ourselves and to completely 
+ignore and disregard who we are. Maybe at this moment you are not your best version and you don’t possess certain things or qualities, 
+yet if you don’t accept yourself now, you won’t be able to find happiness even when you reach all of your goals. Take a good and honest 
+look at yourself, appreciate what is great about you and make peace with your weaknesses. This way you are starting from love rather than 
+judgement or denial.
+
+Foster Gratitude
+Happiness largely depends on how meaningful we think our lives are, therefore make sure to generate genuine meaning and appreciation 
+every day. Even though it can sometimes seem like you are in a rut and can find no silver lining to your life circumstances, you are
+ actually blessed each day with so many amazing things, people and opportunities that you regularly take for granted. Set aside a couple
+ of minutes each day to count your blessings either in your mind or if you are a more visual type of person, write down a list of things 
+you are grateful for. Gratitude for even the most essential things inspires appreciation and meaning that increase happiness.
+Pamper Yourself
+Instead of always trying to make people around you happy, shift to catering to your own needs first. Treat yourself to a nice massage, 
+hot bath, nice movie or a beauty session at a local cosmetic centre every once in a while. This is not to be aimed at changing yourself 
+into being happier, but as a way of showing love for yourself. As you are doing small acts of kindness to your body and soul, your inner
+ being will flourish with contentment and delight that will reflect on all aspect of your life.
+Calm Your Mind
+One of the greatest challenges of the modern world is the noise in our mind created by hectic lifestyles. It is close to impossible to 
+connect to our inner self when our mind is buzzing with thousands of thoughts, most of which are self-limiting. Meditation is one of the 
+most recommended tools for achieving happiness as it stops the momentum of thoughts and lets us hear our deepest inner desires and provides 
+a more calm and hopeful mindset. Create your own spiritual practice that can include either guided meditations or your own rituals that 
+can take you from never-ending bustling to a serene and more optimistic perspective.
+Show Love
+Happy is as happy does. By creating a positive atmosphere around you, you are creating a happy momentum for yourself as well. Smile, 
+make someone smile, do small acts of kindness every day without expecting anything in return and watch how your life transforms into a safe,
+ positive and loving space. Forgive others for their wrongdoings and choose kindness and understanding in relation to others. Be the reason of
+ someone’s smile as by making someone else feel better you are creating a chain of positive emotion that must come back to you.
+Surround Yourself with Uplifting People
+Now that you are aware that no external factor can determine your happiness, it is important to mention that having a great support system 
+cannot hurt. On the contrary, surrounding yourself with people who see and inspire the best in you can only help your wellbeing. Negative and 
+close-minded people should not affect your peace of mind, yet you should not tolerate this kind of energy around you. Loving and caring for
+ yourself means ending destructive relationships and finding a group of optimistic and motivating like-minded people that inspire the best in you.
+
+
+     </p>
+    <!-- hidden body for edit -->
+    <textarea id="postContent_edit"></textarea>
+    <button id="like" onclick="likePost()"><img src="https://img.icons8.com/fluent-systems-filled/20/ffffff/facebook-like.png"/>Like</button>
+    <p id="likeCounter">Be first one to like this!</p>
+    <textarea id="comment" placeholder="leave a comment..."></textarea><br>
+    <button id="postComment" onclick="postComment()">Comment</button>
+    <h3 id="commentHeading">ALL Comments</h3>
+    <div id="allComment">
+
+    </div>
+</div>
+
+
+<script src="../scripts/post.js"></script>
+<script src="../scripts/header.js"></script>
+</body>
+</html>
